@@ -21,7 +21,9 @@ First public release.
 - Offline writing and LaTeX checking via LTeX+ and LaTeX Workshop.
 - Optional retrieval over personal documents via AnythingLLM + `nomic-embed-text`.
 - Full documentation set under `docs/` (introduction, installation, tutorial, architecture,
-  configuration, models and hardware, troubleshooting, FAQ).
+  configuration, models and hardware, troubleshooting, FAQ, uninstall).
+- Documentation website built with MkDocs Material and auto-published to GitHub Pages.
+- Uninstall guide (`docs/09-uninstall.md`) and helper script (`scripts/uninstall.ps1`).
 
 ### Known issues
 - The `ollama run` command-line interface can hang in non-interactive / automation contexts.

@@ -4,15 +4,15 @@
 > while building this project. Start by running `./scripts/health_check.ps1`; it pinpoints
 > most issues.
 
-- [7.1 Ollama / connection](#71-ollama--connection)
+- [7.1 Ollama and connection](#71-ollama-and-connection)
 - [7.2 Model downloads](#72-model-downloads)
 - [7.3 Performance](#73-performance)
 - [7.4 The `ollama run` hang](#74-the-ollama-run-hang)
-- [7.5 VS Code / Continue](#75-vs-code--continue)
-- [7.6 Writing / LaTeX checking](#76-writing--latex-checking)
+- [7.5 VS Code and Continue](#75-vs-code-and-continue)
+- [7.6 Writing and LaTeX checking](#76-writing-and-latex-checking)
 - [7.7 Scripts will not run](#77-scripts-will-not-run)
 
-## 7.1 Ollama / connection
+## 7.1 Ollama and connection
 
 **Symptom:** a client says "connection refused" or a command returns
 `dial tcp 127.0.0.1:11434: ... refused`.
@@ -91,9 +91,9 @@ $body = @{ model="nacho-coder"; prompt="square(x) in one line of Python"; stream
 
 In your own interactive terminal, `ollama run` works normally.
 
-## 7.5 VS Code / Continue
+## 7.5 VS Code and Continue
 
-- **Continue shows no model or "connection refused":** Ollama is not running (see [7.1](#71-ollama--connection)), then reload VS Code.
+- **Continue shows no model or "connection refused":** Ollama is not running (see [7.1](#71-ollama-and-connection)), then reload VS Code.
 - **A model name is greyed out or errors:** the model is not pulled. Run `ollama list` and
   pull anything missing. Confirm `continue-config.yaml` names match `ollama list` exactly.
 - **Autocomplete does nothing:** ensure the autocomplete model in the config
@@ -101,7 +101,7 @@ In your own interactive terminal, `ollama run` works normally.
 - **Edits to the config have no effect:** the active file is
   `%USERPROFILE%\.continue\config.yaml`. Re-copy it from this repo after changes.
 
-## 7.6 Writing / LaTeX checking
+## 7.6 Writing and LaTeX checking
 
 - **LTeX+ flags every technical term:** add them to the dictionary with the quick-fix, or set
   `Ltex: Language` correctly per document (`en-US` vs `es`).

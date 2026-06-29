@@ -11,6 +11,8 @@ No subscription. No cloud. Nothing leaves your machine.
 ![Runtime](https://img.shields.io/badge/runtime-Ollama-black)
 ![GPU](https://img.shields.io/badge/GPU-NVIDIA%208GB%2B-76b900)
 
+[**Documentation website**](https://nachocz.github.io/icz_local_ai_for_research/)
+
 </div>
 
 ---
@@ -115,8 +117,8 @@ specific GPU.
 
 ```powershell
 # 1. Get the framework
-git clone https://github.com/nachocz/icz_local_ai.git
-cd icz_local_ai
+git clone https://github.com/nachocz/icz_local_ai_for_research.git
+cd icz_local_ai_for_research
 
 # 2. Allow local scripts for your user (one time)
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
@@ -154,6 +156,9 @@ loop where they are weak.
 
 ## Documentation
 
+The full documentation is also published as a searchable website:
+<https://nachocz.github.io/icz_local_ai_for_research/>.
+
 | Document | What is inside |
 | --- | --- |
 | [01 Introduction](docs/01-introduction.md) | Purpose, philosophy, who it is for, the offline guarantee |
@@ -164,11 +169,12 @@ loop where they are weak.
 | [06 Models and hardware](docs/06-models-and-hardware.md) | Choosing models, VRAM math, quantization, speed |
 | [07 Troubleshooting](docs/07-troubleshooting.md) | Every failure we hit and how to fix it |
 | [08 FAQ](docs/08-faq.md) | Short answers to common questions |
+| [09 Uninstall](docs/09-uninstall.md) | Remove part or all of the framework and reclaim space |
 
 ## Repository layout
 
 ```
-icz_local_ai/
+icz_local_ai_for_research/
   README.md              this file
   bootstrap.ps1          one-command installer
   LICENSE                MIT
@@ -186,6 +192,7 @@ icz_local_ai/
     build_assistants.ps1      build the custom assistants
     health_check.ps1          verify the whole stack
     start_languagetool.ps1    optional local grammar server (Docker)
+    uninstall.ps1             remove what the framework installed
 ```
 
 ## Make it your own

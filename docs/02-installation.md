@@ -33,8 +33,8 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ## 2.2 Automated install (recommended)
 
 ```powershell
-git clone https://github.com/nachocz/icz_local_ai.git
-cd icz_local_ai
+git clone https://github.com/nachocz/icz_local_ai_for_research.git
+cd icz_local_ai_for_research
 ./bootstrap.ps1
 ```
 

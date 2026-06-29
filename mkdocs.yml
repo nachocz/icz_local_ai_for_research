@@ -1,0 +1,75 @@
+site_name: icz_local_ai
+site_description: A free, fully offline AI assistant for researchers and engineers.
+site_author: Ignacio Cuiral-Zueco
+site_url: https://nachocz.github.io/icz_local_ai_for_research/
+
+repo_url: https://github.com/nachocz/icz_local_ai_for_research
+repo_name: nachocz/icz_local_ai_for_research
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: green
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+plugins:
+  - search
+  - callouts          # renders GitHub-style "> [!NOTE]" blocks as Material admonitions
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.details
+
+nav:
+  - Home: index.md
+  - Introduction: 01-introduction.md
+  - Installation: 02-installation.md
+  - Tutorial: 03-tutorial.md
+  - Architecture: 04-architecture.md
+  - Configuration: 05-configuration.md
+  - Models & hardware: 06-models-and-hardware.md
+  - Troubleshooting: 07-troubleshooting.md
+  - FAQ: 08-faq.md
+  - Uninstall: 09-uninstall.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/nachocz/icz_local_ai_for_research

@@ -31,7 +31,7 @@ See [06 Models and hardware](06-models-and-hardware.md).
 **Will it run on AMD or Apple Silicon?**
 Ollama supports both, so the engine and models will run. The scripts here are written for
 Windows with an NVIDIA GPU; a Linux/macOS port is a welcome contribution
-([CONTRIBUTING.md](https://github.com/nachocz/icz_local_ai/blob/main/CONTRIBUTING.md)).
+([CONTRIBUTING.md](https://github.com/nachocz/icz_local_ai_for_research/blob/main/CONTRIBUTING.md)).
 
 **How do I keep it current with new papers or knowledge?**
 Add documents to an AnythingLLM workspace. Retrieval handles new knowledge with no retraining.
