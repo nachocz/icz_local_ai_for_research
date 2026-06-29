@@ -1,0 +1,28 @@
+# OS / editor cruft
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*~
+
+# Logs and local scratch
+*.log
+/scratch/
+/tmp/
+
+# Local-only overrides (copy a *.local file to customize without committing)
+*.local
+config/*.local
+
+# Models are NOT stored in the repo. They live in Ollama's store
+# (%USERPROFILE%\.ollama) and are pulled by the scripts.
+*.gguf
+*.bin
+*.safetensors
+
+# Python (only if contributors add helper scripts)
+__pycache__/
+*.pyc
+.venv/
+venv/

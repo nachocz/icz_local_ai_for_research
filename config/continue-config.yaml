@@ -1,0 +1,48 @@
+# Continue (VS Code) configuration.
+# Copy to: %USERPROFILE%\.continue\config.yaml   (INSTALL.md Step 6 does this)
+#
+# All models are served locally by Ollama. Nothing leaves your machine.
+# Each model has "roles" telling Continue what to use it for.
+
+name: Nacho Local Stack
+version: 1.0.0
+schema: v1
+
+models:
+  # Main coding model: chat, in-place edits, and applying changes.
+  - name: Coder (Qwen2.5-Coder 7B)
+    provider: ollama
+    model: qwen2.5-coder:7b
+    roles:
+      - chat
+      - edit
+      - apply
+
+  # Heavier reasoning / explanation when you want more depth (slower).
+  - name: Reasoning (Qwen2.5 14B)
+    provider: ollama
+    model: qwen2.5:14b
+    roles:
+      - chat
+
+  # Fast inline ghost-text autocomplete. Small model so it keeps up with typing.
+  - name: Autocomplete (Qwen2.5-Coder 1.5B)
+    provider: ollama
+    model: qwen2.5-coder:1.5b
+    roles:
+      - autocomplete
+
+  # Local embeddings, used when you index a codebase with @codebase.
+  - name: Embeddings (nomic)
+    provider: ollama
+    model: nomic-embed-text
+    roles:
+      - embed
+
+# What the @ menu can attach as context in chat.
+context:
+  - provider: file
+  - provider: code
+  - provider: diff
+  - provider: terminal
+  - provider: codebase
